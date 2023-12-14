@@ -8,14 +8,14 @@ module.exports = {
       'Users',
       [
         {
-          name: 'Василий',
+          name: 'example',
           email: '1@1',
           password: await bcrypt.hash('123', 10),
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          name: 'Иван',
+          name: 'example2',
           email: '2@2',
           password: await bcrypt.hash('123', 10),
           createdAt: new Date(),

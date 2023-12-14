@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   class Favorite extends Model {
     static associate({ User, Card }) {
       this.belongsTo(User, { foreignKey: 'userId' });
-      this.hasMany(Card, { foreignKey: 'favoriteId' });
+      this.belongsTo(Card, { foreignKey: 'cardId' });
     }
   }
   Favorite.init(
@@ -13,6 +13,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         references: {
           model: 'Users',
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
+      },
+      cardId: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'Cards',
           key: 'id',
         },
         onDelete: 'CASCADE',

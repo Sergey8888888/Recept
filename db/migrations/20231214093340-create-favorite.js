@@ -2,37 +2,25 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Cards', {
+    await queryInterface.createTable('Favorites', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
-        allowNull: false,
-        type: Sequelize.TEXT,
-      },
-      image: {
-        allowNull: false,
-        type: Sequelize.TEXT,
-      },
-      description: {
-        allowNull: false,
-        type: Sequelize.TEXT,
-      },
-      timing: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
-      recipes: {
-        allowNull: false,
-        type: Sequelize.TEXT,
-      },
-      favoriteId: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Favorites',
+          model: 'Users',
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
+      },
+      cardId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Cards',
           key: 'id',
         },
         onDelete: 'CASCADE',
@@ -48,6 +36,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Cards');
+    await queryInterface.dropTable('Favorites');
   },
 };

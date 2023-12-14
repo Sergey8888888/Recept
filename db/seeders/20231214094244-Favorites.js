@@ -8,11 +8,13 @@ module.exports = {
       [
         {
           userId: 1,
+          cardId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           userId: 2,
+          cardId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
