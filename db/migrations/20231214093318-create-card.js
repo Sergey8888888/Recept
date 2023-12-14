@@ -2,12 +2,32 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Favorites', {
+    await queryInterface.createTable('Cards', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
+      },
+      name: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      image: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      description: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      timing: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+      },
+      recipes: {
+        allowNull: false,
+        type: Sequelize.TEXT,
       },
       userId: {
         type: Sequelize.INTEGER,
@@ -28,6 +48,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Favorites');
+    await queryInterface.dropTable('Cards');
   },
 };
