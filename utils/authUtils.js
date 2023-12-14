@@ -1,12 +1,14 @@
 const jwt = require('jsonwebtoken');
 const jwtConfig = require('../config/jwtConfig');
 
+// функция генирации токена, принимает в себя полезную нагрузку
+// (инфо о пользователе, "место в цирке")
 const generateTokens = (payload) => ({
-  refreshToken: jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, {
-    expiresIn: 1000 * 60 * 60 * 12,
+  accessToken: jwt.sign(payload, 'A', {
+    expiresIn: jwtConfig.access.expiresIn,
   }),
-  accessToken: jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: 1000 * 60 * 60 * 12,
+  refreshToken: jwt.sign(payload, 'R', {
+    expiresIn: jwtConfig.refresh.expiresIn,
   }),
 });
 
