@@ -18,6 +18,11 @@ h1 {
   text-decoration: none;
 }
 
+
+.recipeItem {
+  display: flex;
+  flex-direction: column;
+
 .form-reg {
   display: flex;
   flex-direction: column;
