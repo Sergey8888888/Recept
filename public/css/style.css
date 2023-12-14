@@ -14,3 +14,8 @@
   margin-bottom: 10px;
   text-decoration: none;
 }
+
+.recipeItem {
+  display: flex;
+  flex-direction: column;
+}
