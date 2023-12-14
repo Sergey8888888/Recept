@@ -1,7 +1,8 @@
 const React = require('react');
 const Header = require('./Header');
 
-module.exports = function Layout({ title, children }) {
+module.exports = function Layout({ title, user, children }) {
+  
   return (
     <html lang="en">
       <head>
@@ -13,7 +14,7 @@ module.exports = function Layout({ title, children }) {
         <script defer src="/js/deleteCategories.js" />
         <script defer src="/js/updateCategories.js" /> */}
       </head>
-      <Header />
+      <Header user={user} />
       <body>{children}</body>
     </html>
   );

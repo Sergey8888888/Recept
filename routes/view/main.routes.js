@@ -26,4 +26,10 @@ router.get('/:id', async (req, res) => {
   res.send(res.renderComponent(OneRecipe, { recipe }));
 });
 
+router.get('/main', async (req, res) => {
+  const { user } = res.locals;
+  const html = await res.renderComponent(MainPage, { user });
+  res.send(html);
+});
+
 module.exports = router;
