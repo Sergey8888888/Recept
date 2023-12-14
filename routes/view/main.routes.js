@@ -7,4 +7,10 @@ router.get('/', async (req, res) => {
   res.send(html);
 });
 
+router.get('/main', async (req, res) => {
+  const { user } = res.locals;
+  const html = await res.renderComponent(MainPage, { user });
+  res.send(html);
+});
+
 module.exports = router;

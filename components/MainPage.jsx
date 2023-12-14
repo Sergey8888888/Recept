@@ -1,11 +1,11 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function MainPage() {
+function MainPage({ user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="main">
-        <h1>Это просто главная страница!</h1>
+        <h1>Здесь будут все рецепты!</h1>
       </div>
     </Layout>
   );
