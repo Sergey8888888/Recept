@@ -1,10 +1,19 @@
 h1 {
   text-align: center;
 }
+.auth {
+  display: flex;
+  gap: 100px;
+}
+.auth-2 {
+  display: flex;
+  gap: 100px;
+}
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 100px;
   background-color: #f2f2f2;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -18,11 +27,6 @@ h1 {
   text-decoration: none;
 }
 
-
-.recipeItem {
-  display: flex;
-  flex-direction: column;
-
 .form-reg {
   display: flex;
   flex-direction: column;
@@ -34,4 +38,16 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.recipeItem {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: max-content;
+}
+
+.btnFav {
+  bottom: -20px;
+  right: 10px;
 }
