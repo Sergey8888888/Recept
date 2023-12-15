@@ -7,8 +7,8 @@ function FavoritePage({ user, recipes }) {
     <Layout user={user}>
       <div className="fav-card"></div>
       <h1>Это страница избранного</h1>
-      
-      {recipes && recipes.map(recipe => <RecipeItem recipe={recipe} />)}
+
+      {recipes && recipes.map((recipe) => <RecipeItem recipe={recipe} />)}
     </Layout>
   );
 }
