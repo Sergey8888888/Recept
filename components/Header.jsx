@@ -3,7 +3,7 @@ const React = require('react');
 function Header({ user }) {
   return (
     <div className="header">
-      <a href="/">Главная страница</a>
+      <a href="/recept">Главная страница</a>
       <div>
         {!user && (
           <div className="auth">

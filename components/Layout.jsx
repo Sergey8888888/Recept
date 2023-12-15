@@ -13,6 +13,7 @@ module.exports = function Layout({ title, user, children }) {
         {/* <script defer src="/js/addCategories.js" />
         <script defer src="/js/deleteCategories.js" />
         <script defer src="/js/updateCategories.js" /> */}
+        <script defer src="/js/fav.js"></script>
       </head>
       <Header user={user} />
       <body>{children}</body>
