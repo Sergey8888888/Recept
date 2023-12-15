@@ -20,7 +20,7 @@ if (loginForm) {
         const body = await response.json();
         console.log(body);
         if (body.success) {
-          window.location.href = '/';
+          window.location.href = '/recept';
         } else {
           document.querySelector('.div-log').innerHTML = 'Заполните все поля!';
         }

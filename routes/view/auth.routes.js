@@ -14,6 +14,6 @@ router.use('/login', (req, res) => {
 router.get('/logout', (req, res) => {
   res.clearCookie('refresh').clearCookie('access');
   res.locals.user = undefined;
-  res.redirect('/');
+  res.redirect('/recept');
 });
 module.exports = router;
