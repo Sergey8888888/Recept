@@ -11,7 +11,7 @@ module.exports = {
           image:
             'https://s6.stc.all.kpcdn.net/family/wp-content/uploads/2023/03/kak-pravilno-est-tom-yam-960-960x540.jpg',
           description: 'Здесь будет способ приготовления супа Том-Ям',
-          timing: 10,
+          timing: 30,
           recipes: 'Здесь будет список ингредиентов',
           userId: 1,
           createdAt: new Date(),

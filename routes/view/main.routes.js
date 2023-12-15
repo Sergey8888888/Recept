@@ -20,9 +20,13 @@ const { Card } = require('../../db/models');
 //   }
 // });
 
+
 router.get('/recept', async (req, res) => {
+
   try {
+    const { sort } = req.query;
     const { user } = res.locals;
+
 
     const response = await fetch(
       'https://657b17dd394ca9e4af13ab8f.mockapi.io/view/recept',
@@ -42,7 +46,23 @@ router.get('/recept', async (req, res) => {
 
     // console.log(recipes);
 
+
+    let recipes;
+
+    if (sort === 'ASC') {
+      recipes = await Card.findAll({
+        order: [['timing', 'ASC']],
+      });
+    } else if (sort === 'DESC') {
+      recipes = await Card.findAll({
+        order: [['timing', 'DESC']],
+      });
+    } else {
+      recipes = await Card.findAll();
+    }
+
     const html = res.renderComponent(MainPage, {
+
       title: 'Main Page',
       recipes,
       user,
