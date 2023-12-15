@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function OneRecipe({ recipe }) {
+function OneRecipe({ recipe, user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="oneRecipe">
         <img src={recipe.image} style={{ width: '200px', height: '200px' }} />
         <h2>{recipe.name}</h2>
