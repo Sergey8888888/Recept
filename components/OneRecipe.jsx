@@ -5,8 +5,11 @@ function OneRecipe({ recipe }) {
   return (
     <Layout>
       <div className="oneRecipe">
-        <img src={recipe.image} style={{ width: '200px', height: '200px' }} />
+        <img src={recipe.image} />
         <h2>{recipe.name}</h2>
+
+        <h3>Время приготовления:{recipe.timing} МИНУТ </h3>
+
         <p>{recipe.recipes}</p>
         <p>{recipe.description}</p>
       </div>
