@@ -6,7 +6,8 @@ function RecipeItem({ recipe, user }) {
       {/* {user.id === recipe.userId && (
                 
             )}  */}
-      <img src={recipe.image} style={{ width: '200px', height: '200px' }} />
+
+      <img src={recipe.image} />
       <a href={`/recept/${recipe.id}`}>{recipe.name}</a>
       <button className="btnFav">Сердечко</button>
     </div>

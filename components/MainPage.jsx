@@ -6,19 +6,11 @@ function MainPage({ recipes, user }) {
   return (
     <Layout user={user}>
       <div className="main">
-        <form>
-          <select name="sort">
-            <option value="">-- Выберите сортировку --</option>
-            <option value="ASC">По возрастанию</option>
-            <option value="DESC">По убыванию</option>
-          </select>
-          <button type="submit">Отправить</button>
-        </form>
-        <div className="recipeItem">
-          {recipes &&
-            recipes.map((recipe) => <RecipeItem recipe={recipe} user={user} />)}
-          <h1>Здесь будут все рецепты!</h1>
-        </div>
+        {/* <h1>Это просто главная страница!</h1> */}
+        {recipes &&
+          recipes.map((recipe) => <RecipeItem recipe={recipe} user={user} />)}
+
+        <h1>Здесь будут все рецепты!</h1>
       </div>
     </Layout>
   );

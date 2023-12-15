@@ -53,7 +53,7 @@ function verifyAccessToken(req, res, next) {
 
     // если верификация прошла успешно, то кладем user в res.locals
     res.locals.user = user;
-
+    console.log(res.locals.user, 123);
     // и отправляем запрос дальше
     next();
   } catch (error) {

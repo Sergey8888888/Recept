@@ -18,7 +18,7 @@ if (loginForm) {
           },
         });
         const body = await response.json();
-
+        console.log(body);
         if (body.success) {
           window.location.href = '/recept';
         } else {

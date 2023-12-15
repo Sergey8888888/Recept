@@ -14,9 +14,9 @@ function Header({ user }) {
         <div>
           {user && (
             <div className="auth-2">
+              <a>👀Добро пожаловать, {user.name}</a>
               <a href="/favorite">Избранное</a>
               <a href="/auth/logout">Выход</a>
-              <a>👋Добро пожаловать, {user.name}</a>
             </div>
           )}
         </div>
