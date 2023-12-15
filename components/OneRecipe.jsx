@@ -7,6 +7,7 @@ function OneRecipe({ recipe, user }) {
       <div className="oneRecipe">
         <img src={recipe.image} style={{ width: '200px', height: '200px' }} />
         <h2>{recipe.name}</h2>
+        <h3>Время приготовления:{recipe.timing} МИНУТ </h3>
         <p>{recipe.resipes}</p>
         <p>{recipe.description}</p>
       </div>
